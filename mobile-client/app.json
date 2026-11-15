@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Darija Translator",
+    "slug": "darija-translator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "usesCleartextTraffic": true
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

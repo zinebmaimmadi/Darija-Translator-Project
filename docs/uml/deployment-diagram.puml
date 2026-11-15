@@ -1,0 +1,17 @@
+@startuml
+node "Client computer" {
+ artifact "Chrome MV3 side panel" as chrome
+ artifact "Web UI" as web
+ artifact "Python CLI" as python
+ artifact "PHP web client" as php
+}
+node "Android / iOS device" { artifact "React Native / Expo" as mobile }
+node "Java host (port 8082)" { artifact "Jersey + Grizzly REST service" as java }
+cloud "Google Gemini API" as gemini
+chrome --> java : HTTP POST + Basic Auth
+web --> java : HTTP POST + Basic Auth
+python --> java : HTTP POST + Basic Auth
+php --> java : HTTP POST + Basic Auth
+mobile --> java : HTTP POST + Basic Auth
+java --> gemini : HTTPS generateContent / API key
+@enduml

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darija Nova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=13">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand-block">
+            <p class="brand-name">Darija.</p>
+            <p class="brand-subtitle">powered by Zineb </p>
+        </div>
+        <p class="topbar-title" id="conversation-title"></p>
+    </header>
+
+    <main class="app-shell" id="app-shell">
+        <section class="workspace">
+            <section class="hero">
+                <p class="greeting">DARija · ENGLISH <span class="language-arrow">↔</span></p>
+                <h1>Your words,<br><em>beautifully understood.</em></h1>
+                <p class="hero-note">A little language magic, grounded in a Gemini-powered translation service.</p>
+            </section>
+
+            <section class="chat-log" id="chat-log"></section>
+
+            <form class="composer" id="composer">
+                <p class="composer-label">YOUR TEXT <span>ENGLISH → DARIJA</span></p>
+                <label class="composer-shell" for="prompt-input">
+                    <textarea id="prompt-input" name="prompt" rows="1" placeholder="Type in English"></textarea>
+                    <button class="send-button" type="submit" aria-label="Translate">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5v14M7 10l5-5 5 5"></path>
+                        </svg>
+                    </button>
+                </label>
+            </form>
+
+            <div class="technical-note"><span class="service-dot"></span><span>Jakarta REST API</span><span class="note-separator">·</span><span>Gemini translation</span><span class="note-separator">·</span><span>Moroccan Darija</span></div>
+            <p class="status-line" id="status-text" aria-live="polite"></p>
+        </section>
+
+        <section class="research-showcase reveal-on-scroll" id="research-showcase">
+            <div class="research-header">
+                <p class="research-kicker">Behind the translation</p>
+                <h2>Language, culture, and thoughtful AI.</h2>
+                <a href="https://deepmind.google/research/" target="_blank" rel="noreferrer" class="research-link">
+                    Explore the original site
+                </a>
+            </div>
+
+            <div class="research-grid">
+                <article class="research-card research-card-feature">
+                    <p class="research-label">01 · LANGUAGE MODEL</p>
+                    <h3>Gemini reads for meaning and returns a natural Moroccan Darija translation.</h3>
+                </article>
+
+                <article class="research-card">
+                    <p class="research-label">02 · REST SERVICE</p>
+                    <h3>A Jakarta REST endpoint connects the interface to the translation model.</h3>
+                </article>
+
+                <article class="research-card">
+                    <p class="research-label">03 · YOUR PRIVACY</p>
+                    <h3>Requests are sent to the local service at 127.0.0.1:8082.</h3>
+                </article>
+
+                <article class="research-card">
+                    <p class="research-label">04 · BUILT TO EXPLORE</p>
+                    <h3>Copy a result, try again, and explore the nuances of Darija.</h3>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="./app.js?v=15"></script>
+</body>
+</html>

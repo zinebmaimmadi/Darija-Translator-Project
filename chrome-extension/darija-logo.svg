@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-labelledby="title">
+  <title>Darija Arabe</title>
+  <g fill="#c7cdd1">
+    <text
+      x="8"
+      y="118"
+      font-family="Baskerville, Didot, 'Times New Roman', serif"
+      font-size="132"
+      letter-spacing="-3"
+    >
+      Darija
+    </text>
+    <text
+      x="22"
+      y="150"
+      font-family="Baskerville, Didot, 'Times New Roman', serif"
+      font-size="56"
+      letter-spacing="-1"
+    >
+      Arabe
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darija Nova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sidepanel.css?v=8">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <div class="brand-block">
+                <p class="brand-name">Darija.</p>
+                <p class="brand-subtitle">powered by ZinebDeepmind</p>
+            </div>
+        </header>
+
+        <section class="workspace">
+            <section class="hero">
+                <p class="greeting">DARIJA · ENGLISH</p>
+                <h1>Your words,<br><em>beautifully understood.</em></h1>
+                <p class="hero-note">Gemini-powered translation to Moroccan Darija.</p>
+            </section>
+
+            <section class="chat-log" id="chat-log"></section>
+
+            <form id="translator-form" class="composer">
+                <p class="composer-label">YOUR TEXT <span>ENGLISH → DARIJA</span></p>
+                <label class="composer-shell" for="prompt-input">
+                    <textarea id="prompt-input" name="prompt" rows="1" placeholder="Type in English"></textarea>
+                    <button class="send-button" type="submit" aria-label="Translate">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5v14M7 10l5-5 5 5"></path>
+                        </svg>
+                    </button>
+                </label>
+            </form>
+
+            <div class="technical-note"><span class="service-dot"></span><span>Jakarta REST API</span><span>·</span><span>Gemini translation</span></div>
+            <p class="status-line" id="status-text" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="./sidepanel.js?v=9"></script>
+</body>
+</html>

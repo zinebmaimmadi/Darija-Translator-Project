@@ -1,0 +1,22 @@
+@startuml
+skinparam classAttributeIconSize 0
+class TranslatorApplication
+class TranslatorServer { +startServer() }
+class TranslatorResource { +translate(authorization, request): TranslationResponse }
+class TranslationService { +translate(request): TranslationResponse }
+class BasicAuthGuard { +ensureAuthorized(header): void }
+class TranslationRequest <<record>> { text; sourceLanguage; targetLanguage; style }
+class TranslationResponse <<record>> { originalText; translatedText; sourceLanguage; targetLanguage; model; status }
+class CorsResponseFilter
+class GlobalExceptionMapper
+TranslatorServer --> TranslatorApplication
+TranslatorApplication --> TranslatorResource
+TranslatorApplication --> CorsResponseFilter
+TranslatorApplication --> GlobalExceptionMapper
+TranslatorResource --> BasicAuthGuard
+TranslatorResource --> TranslationService
+TranslatorResource ..> TranslationRequest
+TranslatorResource ..> TranslationResponse
+TranslationService ..> TranslationRequest
+TranslationService ..> TranslationResponse
+@enduml
