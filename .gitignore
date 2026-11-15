@@ -1,0 +1,13 @@
+.DS_Store
+.pdfenv/
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+coverage/
+target/
+out/
+.env
+.env.*
+*.log
